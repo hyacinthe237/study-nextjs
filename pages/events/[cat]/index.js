@@ -8,7 +8,7 @@ function EventCatPage ({ data, pageName }) {
 
             <div className="grid grid-cols-4">
                 {data.map(ev => (
-                    <div key={ev.id} class="mr-2 h-auto bg-slate-200 p-1 min-h-96 mb-4 rounded shadow-2xl"><Link href={`/events/${ev.city}/${ev.id}`} passHref>
+                    <div key={ev.id} className="mr-2 h-auto bg-slate-200 p-1 min-h-96 mb-4 rounded shadow-2xl"><Link href={`/events/${ev.city}/${ev.id}`} passHref>
                         <Image src={ev.image} width={300} height={200} alt={ev.title} className="mt-1 w-full min-h-min" />
                         <h2 className="font-bold mt-3">{ev.title}</h2>
                         <p class="text-justify">{ev.description}</p>

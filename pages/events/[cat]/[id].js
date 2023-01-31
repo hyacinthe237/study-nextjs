@@ -1,16 +1,10 @@
-import Image from 'next/image';
+import SingleEvent from '../../../src/components/events/single-event';
+
 
 function SingleEventPage({data}) {
-    console.log(data)
-    return (
-        <div className='container'>
-            <Image src={data.image} width={1024} height={500} alt={data.title} />
-
-            <h1 className='text-bold text-5xl uppercase'>{data.title}</h1>
-            <p className='mb-10'>{data.description}</p>
-        </div>
-    );
+    return (<SingleEvent data={data} />);
 }
+// const SingleEventPage = ({ data }) =>
 
 export async function getStaticPaths () {
     const {allEvents} = await import('../../../data/data.json');
